@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVYAAN ACADEMY - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <img src="photos/logo.webp" alt="Avyaan Academy Logo">
+    <div>
+      <h1>AVYAAN ACADEMY</h1>
+      <h3>Computer Training Centre & Library</h3>
+      <p>Online Admission Portal</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admission.html">Apply Online</a>
+    <a href="ourmissionandvision.html">Mission & Vision</a>
+    <a href="services.html">Services</a>
+    <a href="faculties.html">Faculties</a>
+  </nav>
+
+  <section id="home">
+    <div class="slider">
+      <img class="slide active" src="Photos/slide4.webp" alt="Slide 1">
+      <img class="slide" src="photos/Slide1.webp" alt="Slide 2">
+      <img class="slide" src="photos/Slide2.webp" alt="Slide 3">
+      <img class="slide" src="photos/Slide3.webp" alt="Slide 4">
+    </div>
+    <h2>Welcome to AVYAAN ACADEMY</h2>
+    <p>We offer top-quality coaching for Computer Courses. Use our online admission form to apply easily from home.</p>
+    <a class="btn" href="admission.html">Go to Admission Form</a>
+  </section>
+
+  <section id="faculty">
+    <h2>Our Team</h2>
+    <div class="faculty-row">
+      <div>
+        <h3>Director</h3>
+        <p>Pallavi Bharadwaj<br>ADCA, B.Ed</p>
+      </div>
+      <div>
+        <h3>Managing Director</h3>
+        <p>Er. Abhay Anand<br>B.Sc IT</p>
+      </div>
+      <div>
+        <h3>Faculty Members</h3>
+        <ul>
+          <li>Ankit Giri - ADCA, PGDCA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: avyaanacademy@gmail.com</p>
+    <p>Phone: +91-8521243649</p>
+    <p>Address: Poonam Giri Sadan, Front of Police Station, Tajpur, Near Central Bank, Tajpur, Samastipur, Bihar (848130)</p>
+  </section>
+
+  <footer>&copy; 2025 Avyaan Academy | All Rights Reserved</footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[slideIndex].classList.add('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      setTimeout(showSlides, 3000);
+    }
+
+    document.addEventListener('DOMContentLoaded', showSlides);
+  </script>
+</body>
+</html>
